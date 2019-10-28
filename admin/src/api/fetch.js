@@ -30,12 +30,12 @@ Util.ajax.interceptors.response.use(response => {
     // 登录鉴权失败
     Vue.prototype.$Message.error('登录鉴权失败');
     Vue.ls.remove("token");
-    location.href = "/login";
+    // location.href = "/login";
 
   } else if (response.status === 403) {
     Vue.prototype.$Message.error('Token无效，请重新登录！');
     Vue.ls.remove("token");
-    location.href = "/login";
+    // location.href = "/login";
 
   } else if (response.status === 400) {
     Vue.prototype.$Message.error(response.data.msg.join(','))

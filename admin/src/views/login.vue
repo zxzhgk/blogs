@@ -88,7 +88,8 @@
             this.$ls.set('token', ret.data.token);
             // 跳转
             this.$Message.success("登录成功！");
-            window.location.href = '/'
+            this.$router.push("/")
+            // window.location.href = '/'
 
           }).catch(err => {
             console.log('err')
@@ -113,7 +114,7 @@
   .login {
     width: 100%;
     height: 100%;
-    background-image: url('../assets/login_bg.jpg');
+    /* background-image: url('../assets/login_bg.jpg'); */
     background-size: cover;
     background-position: center;
     position: relative;

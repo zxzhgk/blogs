@@ -87,9 +87,10 @@
       }),
     },
     created() {
+      console.log("我执行啦")
       // 获取文章
       this.getArticle();
-      document.title = `波博客 - boblog.com`
+      document.title = `test - boblog.com`
     },
     methods: {
       ...mapActions({

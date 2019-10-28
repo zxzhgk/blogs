@@ -85,10 +85,11 @@
 
           this.login(this.form).then(ret => {
             console.log('done')
+            debugger;
             this.$ls.set('token', ret.data.token);
             // 跳转
             this.$Message.success("登录成功！");
-            this.$router.push("/")
+            this.$router.push("/home")
             // window.location.href = '/'
 
           }).catch(err => {

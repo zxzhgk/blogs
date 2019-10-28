@@ -7,7 +7,7 @@
 const menus = [
     {
       name: "首页",
-      path: "/",
+      path: "/home",
       icon: "ios-navigate"
     },
     // 系统管理

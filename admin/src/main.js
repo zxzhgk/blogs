@@ -24,7 +24,7 @@ Vue.use(VueLocalStorage, {
 
 // 路由配置
 const RouterConfig = {
-  mode: 'history',
+  // mode: 'history',
   routes: Routers,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {

@@ -12,8 +12,8 @@ app.use(cors())
 app.use(catchError)
 app.use(parser())
 // 配置静态web服务的中间件chat
-app.use(static(__dirname+"/web/dist")); // 前端
-app.use(static(__dirname+"/admin/dist")); // 后端
+app.use(static(__dirname+"/web/")); // 前端
+app.use(static(__dirname+"/admin/")); // 后端
 InitManager.initCore(app)
 
 app.listen(3000)

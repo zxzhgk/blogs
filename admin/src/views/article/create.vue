@@ -18,7 +18,7 @@
             <Upload
               multiple
               type="drag"
-              action="http://up-z2.qiniu.com"
+              action="http://up-z1.qiniu.com"
               :show-upload-list="false"
               :on-success="uploadSuccess"
               :on-error="uploadError"
@@ -94,7 +94,9 @@
       }),
       // 上传图片成功
       uploadSuccess(response) {
-        const url = `http://cdn.boblog.com/${response.key}`;
+        console.log(response);
+        const url = `http://q02y21j2t.bkt.clouddn.com/${response.key}`;
+        // http://<domain>/<key>?e=<deadline>&token=<downloadToken>
         this.formValidate.cover = url;
         this.$Message.success('上传成功!');
       },

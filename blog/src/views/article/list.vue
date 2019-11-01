@@ -50,10 +50,9 @@
       </ul>
       <ul class="article-empty" v-else>暂无文章</ul>
     </article>
-
     <div class="sidebar">
       <v-category/>
-      <v-links/>
+      <!-- <v-links/> -->
     </div>
   </section>
 </template>
@@ -238,7 +237,7 @@
 
     & .article-title {
       color: #464c5b;
-      font-size: 24px;
+      font-size: 18px;
       margin: 0;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -250,14 +249,14 @@
         display: inline-block;
         margin-right: 24px;
         margin-top: 24px;
-        font-size: 16px;
+        font-size: 14px;
         color: #9ea7b4;
       }
 
       & p.article-category {
         height: 32px;
         line-height: 32px;
-        padding: 0 32px;
+        padding: 0 20px;
         font-size: 16px;
         color: #409EFF;
         border-radius: 32px;

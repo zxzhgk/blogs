@@ -2,15 +2,14 @@
   <section>
     <section class="comments-create">
       <h1 class="comments-title">欢迎评论</h1>
-
       <el-form :model="ruleForm" status-icon :rules="rules" label-position="left" ref="ruleForm" label-width="50px"
                class="demo-ruleForm">
         <el-form-item label="昵称" prop="nickname">
-          <el-input type="text" placeholder="请输入您的昵称" v-model="ruleForm.nickname"></el-input>
+          <el-input type="text" maxlength="6" style="width:200px" placeholder="请输入您的昵称" v-model="ruleForm.nickname"></el-input>
         </el-form-item>
-        <el-form-item label="邮箱" prop="email">
+        <!-- <el-form-item label="邮箱" prop="email">
           <el-input type="text" placeholder="请输入您的邮箱（不会被公开）" v-model="ruleForm.email"></el-input>
-        </el-form-item>
+        </el-form-item> -->
         <el-form-item label="内容" prop="content">
           <!--          <el-input type="textarea" placeholder="评论内容.." rows="4" v-model="ruleForm.content"-->
           <!--                    autocomplete="off"></el-input>-->
@@ -18,6 +17,7 @@
             class="mavon-editor--box"
             v-model="ruleForm.content"
             :autofocus="false"
+            :defaultOpen="'edit'"
             placeholder="请输入评论内容"
             :ishljs="true">
           </mavon-editor>
@@ -190,7 +190,7 @@
   .comments-title {
     padding: 16px 0;
     color: #409EFF;
-    font-size: 36px;
+    font-size: 16px;
   }
 
   .comments-create {
@@ -212,7 +212,7 @@
     }
 
     .comments-item-username {
-      font-size: 22px;
+      font-size: 16px;
       color: #409EFF;
       font-weight: bold;
     }
@@ -237,33 +237,6 @@
 
 </style>
 
-<style lang="scss">
-  .comments-item-content {
-    width: 100%;
-    box-sizing: border-box;
+<style lang="scss" scoped>
 
-    & .v-note-wrapper .v-note-panel {
-      box-shadow: none !important;
-    }
-
-    & .v-note-wrapper .v-note-panel .v-note-show .v-show-content, .v-note-wrapper .v-note-panel .v-note-show .v-show-content-html {
-      background: #fff !important;
-    }
-
-    & .v-note-wrapper .v-note-panel .v-note-edit.divarea-wrapper .content-input-wrapper {
-      padding: 0 !important;
-    }
-
-    & .v-note-wrapper .v-note-panel .v-note-show .v-show-content, .v-note-wrapper .v-note-panel .v-note-show .v-show-content-html {
-      padding: 0 !important;
-    }
-
-    .markdown-body blockquote, .markdown-body dl, .markdown-body ol, .markdown-body p, .markdown-body pre, .markdown-body table, .markdown-body ul {
-      margin-bottom: 0 !important;
-    }
-
-    .markdown-body {
-      font-size: 18px !important;
-    }
-  }
 </style>

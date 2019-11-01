@@ -1,10 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
 Vue.use(Router)
 
 export default new Router({
-  // 哈斯
   // mode: 'history',
   scrollBehavior(to, from, savedPosition) {
     // 兼容
@@ -18,23 +16,17 @@ export default new Router({
     {
       // 文章列表
       path: '/',
-      component(resolve) {
-        require(['../views/article/list.vue'], resolve);
-      }
+      component: () => import('@/views/article/list.vue')
     },
     {
       // 文章详情
       path: '/article/detail/:id',
-      component(resolve) {
-        require(['../views/article/detail.vue'], resolve);
-      }
+      component: () => import('@/views/article/detail.vue')
     },
     {
       // 关于我
       path: '/about',
-      component(resolve) {
-        require(['../views/about/index.vue'], resolve);
-      }
+      component: () => import('@/views/about/index.vue')
     }
   ]
 })

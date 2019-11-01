@@ -81,11 +81,9 @@
        * 切换导航栏
        */
       changeNav(path, index) {
-        this.$router.replace({
-          query: merge({})
-        });
+        this.$router.replace(path);
         this.navIndex = index;
-        this.toPath(path);
+        // this.toPath(path);
         this.getArticle();
       },
       /**

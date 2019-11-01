@@ -2,7 +2,6 @@
   <section class="container" v-if="detail">
     <section class="content">
       <h1 class="article-title">{{detail.title}}</h1>
-
       <div class="article-info">
         <p class="article-category" v-if="detail.category_detail">
           {{detail.category_detail.name}}
@@ -111,7 +110,7 @@
       border-radius: 8px;
 
       & .article-title {
-        font-size: 54px;
+        font-size: 18px;
         color: #404040;
       }
 
@@ -121,14 +120,14 @@
           display: inline-block;
           margin-right: 24px;
           margin-top: 24px;
-          font-size: 16px;
+          font-size: 14px;
           color: #9ea7b4;
         }
 
         & p.article-category {
           height: 32px;
           line-height: 32px;
-          padding: 0 32px;
+          padding: 0 20px;
           font-size: 16px;
           color: #409EFF;
           border-radius: 32px;
@@ -137,7 +136,7 @@
       }
 
       & .article-detail {
-        font-size: 20px;
+        // font-size: 16px;
         color: #657180;
         line-height: 48px;
         margin-top: 32px;
@@ -154,25 +153,6 @@
     }
   }
 
-</style>
-<style lang="scss">
-  #article-detail {
-    & .v-note-wrapper .v-note-panel {
-      box-shadow: none !important;
-    }
-
-    & .v-note-wrapper .v-note-panel .v-note-show .v-show-content, .v-note-wrapper .v-note-panel .v-note-show .v-show-content-html {
-      background: #fff !important;
-    }
-
-    & .v-note-wrapper .v-note-panel .v-note-edit.divarea-wrapper .content-input-wrapper {
-      padding: 0 !important;
-    }
-
-    & .v-note-wrapper .v-note-panel .v-note-show .v-show-content, .v-note-wrapper .v-note-panel .v-note-show .v-show-content-html {
-      padding: 0 !important;
-    }
-  }
 </style>
 
 

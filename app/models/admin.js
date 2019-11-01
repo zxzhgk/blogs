@@ -39,7 +39,8 @@ Admin.init({
             return moment(this.getDataValue('created_at')).format('YYYY-MM-DD');
         }
     }
-}, {
+}, 
+{
     sequelize,
     tableName: 'admin'
 })

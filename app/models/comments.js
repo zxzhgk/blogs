@@ -15,8 +15,8 @@ Comments.init({
     },
     // 评论人的名字
     nickname: Sequelize.STRING,
-    // 评论人的邮箱
-    email: Sequelize.STRING,
+    // // 评论人的邮箱
+    // email: Sequelize.STRING,
     // 评论内容
     content: Sequelize.TEXT,
     // 文章ID

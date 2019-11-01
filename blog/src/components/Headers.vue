@@ -1,10 +1,6 @@
 <template>
   <section class="header">
     <header class="header-box">
-      <section class="logo">
-        <a href="/"><img src="../assets/images/LOGO.png" alt="LOGO"></a>
-      </section>
-
       <ul class="nav-dropdown">
         <li class="nav-item">
           <el-dropdown trigger="click">
@@ -61,7 +57,7 @@
         nav: [
           {name: '文章', path: '/', icon: 'el-icon-house'},
           // {name: '专栏', path: '/book', icon: 'el-icon-reading\n'},
-          {name: '关于', path: '/about', icon: 'el-icon-chat-round'},
+          // {name: '关于', path: '/about', icon: 'el-icon-chat-round'},
         ]
       }
     },
@@ -171,7 +167,7 @@
 
   .nav-list {
     display: block;
-    margin: 0 24px;
+    // margin: 0 24px;
 
     & .nav-box {
       display: flex;
@@ -183,11 +179,12 @@
         display: flex;
         align-items: center;
         justify-items: center;
-        padding: 0 24px;
+        // padding: 0 24px;
         height: 96px;
         line-height: 96px;
         color: #404040;
-        font-size: 20px;
+        font-size: 18px;
+        margin-right: 24px;
         text-decoration: none;
 
         &:hover {
@@ -207,7 +204,6 @@
 
   .search {
     position: relative;
-    width: 480px;
 
     .search-icon {
       position: absolute;

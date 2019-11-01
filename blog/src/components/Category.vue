@@ -103,7 +103,7 @@
       display: flex;
       align-items: center;
       color: #464c5b;
-      font-size: 24px;
+      font-size: 18px;
       padding: 10px 0;
       border-bottom: 1px solid #f0f0f0;
     }

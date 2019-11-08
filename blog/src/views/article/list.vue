@@ -36,19 +36,17 @@
             </div>
           </div>
         </li>
-
-        <section class="page" v-if="pagination">
-          <el-pagination
-            background
-            layout="prev, pager, next"
-            :page-count="pagination.count"
-            :current-page="pagination.current_page"
-            @current-change="changePage"
-            :total="pagination.total">
-          </el-pagination>
-        </section>
       </ul>
       <ul class="article-empty" v-else>暂无文章</ul>
+      <section class="page" v-if="pagination.total_pages>1">
+        <el-pagination
+          layout="prev, pager, next"
+          :page-count="pagination.count"
+          :current-page="pagination.current_page"
+          @current-change="changePage"
+          :total="pagination.total_pages">
+        </el-pagination>
+      </section>
     </article>
     <div class="sidebar">
       <v-category/>
@@ -86,10 +84,9 @@
       }),
     },
     created() {
-      console.log("我执行啦")
       // 获取文章
       this.getArticle();
-      document.title = `test - boblog.com`
+      document.title = `test - blog.com`
     },
     methods: {
       ...mapActions({
@@ -279,7 +276,7 @@
   }
 
   .page {
-    padding: 32px 0;
+    padding: 20px 0;
     text-align: center;
   }
 

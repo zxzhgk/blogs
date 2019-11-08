@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-loading :text="loadingText" v-if="isLoading"/>
-    <v-headers/>
+    <!-- <v-headers/> -->
     <router-view class="router-views"/>
     <!-- <main-footer/> -->
   </div>

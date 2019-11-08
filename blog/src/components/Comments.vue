@@ -11,13 +11,12 @@
           <el-input type="text" placeholder="请输入您的邮箱（不会被公开）" v-model="ruleForm.email"></el-input>
         </el-form-item> -->
         <el-form-item label="内容" prop="content">
-          <!--          <el-input type="textarea" placeholder="评论内容.." rows="4" v-model="ruleForm.content"-->
-          <!--                    autocomplete="off"></el-input>-->
           <mavon-editor
-            class="mavon-editor--box"
+            style="min-height:100px"
             v-model="ruleForm.content"
             :autofocus="false"
             :defaultOpen="'edit'"
+            :toolbars="toolbars"
             placeholder="请输入评论内容"
             :ishljs="true">
           </mavon-editor>
@@ -51,16 +50,17 @@
           </div>
         </li>
       </ul>
-      <section class="page" v-if="commentsList && commentsList.meta">
+      <!-- <section class="page" v-if="commentsList && commentsList.meta">
         <el-pagination
           background
+          v-show="commentsList.meta.count>1"
           layout="prev, pager, next"
           :page-count="commentsList.meta.count"
           :current-page="commentsList.meta.current_page"
           @current-change="changePage"
           :total="commentsList.meta.total">
         </el-pagination>
-      </section>
+      </section> -->
     </section>
   </section>
 </template>
@@ -113,6 +113,41 @@
           content: [
             {validator: validateContent, trigger: 'blur'}
           ],
+        },
+        toolbars: {
+          bold: true, // 粗体
+          italic: true, // 斜体
+          header: false, // 标题
+          underline: true, // 下划线
+          strikethrough: true, // 中划线
+          mark: false, // 标记
+          superscript: false, // 上角标
+          subscript: false, // 下角标
+          quote: true, // 引用
+          ol: false, // 有序列表
+          ul: false, // 无序列表
+          link: true, // 链接
+          imagelink: false, // 图片链接
+          code: false, // code
+          table: false, // 表格
+          fullscreen: true, // 全屏编辑
+          readmodel: false, // 沉浸式阅读
+          htmlcode: false, // 展示html源码
+          help: true, // 帮助
+          /* 1.3.5 */
+          undo: false, // 上一步
+          redo: false, // 下一步
+          trash: false, // 清空
+          save: false, // 保存（触发events中的save事件）
+          /* 1.4.2 */
+          navigation: false, // 导航目录
+          /* 2.1.8 */
+          alignleft: true, // 左对齐
+          aligncenter: true, // 居中
+          alignright: true, // 右对齐
+          /* 2.2.1 */
+          subfield: false, // 单双栏模式
+          preview: true, // 预览
         }
       }
     },
@@ -190,7 +225,7 @@
   .comments-title {
     padding: 16px 0;
     color: #409EFF;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .comments-create {

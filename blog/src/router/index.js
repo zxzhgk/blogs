@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Layout from '@/layout'
 Vue.use(Router)
-
 export default new Router({
   // mode: 'history',
   scrollBehavior(to, from, savedPosition) {
@@ -17,6 +17,19 @@ export default new Router({
       // 文章列表
       path: '/',
       component: () => import('@/views/article/list.vue')
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: Layout,
+      redirect: 'noRedirect',
+      children: [
+        {
+          path: 'test',
+          name: 'test',
+          component: () => import('@/views/article/home')
+        }
+      ]
     },
     {
       // 文章详情

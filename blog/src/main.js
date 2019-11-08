@@ -9,6 +9,7 @@ import 'mavon-editor/dist/css/index.css'
 // 使用 ElementUI
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import '@/icons'
 import '@/permission'
 Vue.use(ElementUI)
 

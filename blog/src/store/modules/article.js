@@ -37,7 +37,6 @@ const actions = {
     let res = await article.list(params);
     commit('SET_ARTICLE_LIST', res.data.data.data);
     commit('SET_PAGINATION', res.data.data.meta);
-
     return res;
   },
 

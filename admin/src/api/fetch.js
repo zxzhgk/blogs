@@ -51,16 +51,29 @@ Util.ajax.interceptors.response.use(response => {
 })
 
 export default {
-  post(url, data) {
-    return Util.ajax({
-      method: 'post',
-      url: url,
-      data: qs.stringify(data),
-      timeout: 30000,
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-      }
-    })
+  post(url,data,mode) {
+    // formData 格式时不做而外转换
+    if(mode=="formData"){
+      return Util.ajax({
+        method: 'post',
+        url: url,
+        data:data,
+        timeout: 30000,
+        // headers: {
+        //   'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+        // }
+      })
+    }else{
+      return Util.ajax({
+        method: 'post',
+        url: url,
+        data: qs.stringify(data),
+        timeout: 30000,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+        }
+      })
+    }
   },
 
   get(url, params) {

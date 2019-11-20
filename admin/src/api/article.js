@@ -1,6 +1,10 @@
 import fetch from './fetch';
 
 export default {
+  // 上传图片至七牛
+  uploadImageToQiniu(params){
+    return fetch.post('http://up-z1.qiniu.com', params,"formData");
+  },
   // 获取文章列表
   list(params) {
     return fetch.get('/article', params)

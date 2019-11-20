@@ -71,7 +71,7 @@ export default {
     font-size: 25px;
     writing-mode: vertical-lr;
     height: 235px;
-    margin-left: 94px;
+    margin-left: 100px;
     letter-spacing:6px;
     padding: 30px 0;
     // span{

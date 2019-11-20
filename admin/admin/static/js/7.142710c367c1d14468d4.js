@@ -1,0 +1,2 @@
+webpackJsonp([7],{"8hXn":function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var a={render:function(){var t=this.$createElement,e=this._self._c||t;return e("div",[e("h1",{staticStyle:{"text-align":"center","margin-top":"100px"}},[this._v(this._s(this.msg))])])},staticRenderFns:[]};var i=n("C7Lr")({name:"Index",data:function(){return{msg:"Welcome to Your Backstage"}}},a,!1,function(t){n("ih45")},"data-v-7afd221d",null);e.default=i.exports},ih45:function(t,e){}});
+//# sourceMappingURL=7.142710c367c1d14468d4.js.map

@@ -1,11 +1,11 @@
 <template>
   <section class="layout-side" :class="{'side-open':showSide}">
     <div class="avatar"></div>
+    <div class="css1d2d456643209bc verse"><span>后海有树的院子，</span>夏代有工的玉，此时此刻的云，二十来岁的你。</div>
     <el-input v-model="search" class="search" placeholder="搜点啥吧,万一有惊喜呢..."></el-input>
     <ul class="css1d2cc83689209bc nav">
-      <router-link tag="li" to="/"><svg-icon icon-class="lovely" class="lovely"></svg-icon>首页</router-link>
-      <!-- <li></li> -->
-      <li><svg-icon icon-class="lovely" class="lovely"></svg-icon>介绍</li>
+      <router-link tag="li" to="/">首页</router-link>
+      <li>介绍</li>
     </ul>
   </section>
 </template>
@@ -66,6 +66,17 @@ export default {
     .lovely{
       color: #dfd9d9;
     }
+  }
+  .verse{
+    font-size: 25px;
+    writing-mode: vertical-lr;
+    height: 235px;
+    margin-left: 94px;
+    letter-spacing:6px;
+    padding: 30px 0;
+    // span{
+    //   letter-spacing:10px;
+    // }
   }
 }
 .side-open{

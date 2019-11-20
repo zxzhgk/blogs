@@ -14,27 +14,29 @@ export default new Router({
   },
   routes: [
     {
-      // 文章列表
       path: '/',
-      component: () => import('@/views/article/list.vue')
-    },
-    {
-      path: '/home',
-      name: 'home',
       component: Layout,
-      redirect: 'noRedirect',
+      redirect: 'home',
       children: [
         {
-          path: 'test',
-          name: 'test',
+          path: 'home',
+          name: 'home',
           component: () => import('@/views/article/home')
         }
       ]
     },
     {
-      // 文章详情
-      path: '/article/detail/:id',
-      component: () => import('@/views/article/detail.vue')
+      path: '/article',
+      name: 'article',
+      component: Layout,
+      redirect: 'noRedirect',
+      children: [
+        {
+          path: 'detail/:id',
+          name: 'detail',
+          component: () => import('@/views/article/detail.vue')
+        }
+      ]
     },
     {
       // 关于我

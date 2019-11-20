@@ -85,7 +85,7 @@
 
           this.login(this.form).then(ret => {
             console.log('done')
-            debugger;
+            // debugger;
             this.$ls.set('token', ret.data.token);
             // 跳转
             this.$Message.success("登录成功！");

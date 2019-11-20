@@ -1,15 +1,7 @@
-<!--
- * @Author: your name
- * @Date: 2019-11-09 15:02:06
- * @LastEditTime: 2019-11-09 16:40:55
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \simpleDemoe:\blogs\blog\src\layout\components\main.vue
- -->
 <template>
   <section class="layout-main">
     <svg-icon icon-class="side-menu" class="side-menu" :class="{'sild-open':showSide}" @click="toggleSide"></svg-icon>
-    <transition name="fade-transform" mode="out-in">
+    <transition name="fade">
       <router-view/>
     </transition>
   </section>
@@ -47,8 +39,8 @@ export default {
     position: fixed;
     top: 10px;
     left: 10px;
-    color: #dedede;
-    transition: color,left .5s;
+    color: #a7a7a7;
+    transition: all .8s;
     cursor: pointer;
     &:hover{
       color: #000;
@@ -57,6 +49,11 @@ export default {
   .sild-open{
     left:310px;
   }
-  /* transition: width .3s ease-in; */
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
 }
 </style>

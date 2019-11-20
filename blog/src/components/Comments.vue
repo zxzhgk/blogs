@@ -1,7 +1,7 @@
 <template>
   <section>
     <section class="comments-create">
-      <h1 class="comments-title">欢迎评论</h1>
+      <h1 class="comments-title"><svg-icon icon-class="lovely" class="lovely"></svg-icon>欢迎评论<svg-icon icon-class="lovely" class="lovely"></svg-icon></h1>
       <el-form :model="ruleForm" status-icon :rules="rules" label-position="left" ref="ruleForm" label-width="50px"
                class="demo-ruleForm">
         <el-form-item label="昵称" prop="nickname">

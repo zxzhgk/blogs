@@ -15,13 +15,13 @@ const mutations = {
 const actions = {
   // 管理员登录
   login({state, commit}, params) {
-    debugger
+    // debugger
     return admin.login(params);
   },
 
   // 获取当前管理员信息
   async auth({state, commit}, params) {
-    debugger
+    // debugger
     const res = await admin.auth(params);
     commit('SET_USER_INFO', res.data.data);
     return res;

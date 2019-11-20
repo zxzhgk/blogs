@@ -38,7 +38,7 @@
         </li>
       </ul>
       <ul class="article-empty" v-else>暂无文章</ul>
-      <section class="page" v-if="pagination.total_pages>1">
+      <section class="page" v-if="pagination && pagination.total_pages>1">
         <el-pagination
           layout="prev, pager, next"
           :page-count="pagination.count"
@@ -149,6 +149,7 @@
   .container {
     display: flex;
     width: 90%;
+    max-width: 1360px;
     margin: 0 auto;
     overflow: hidden;
   }
@@ -201,7 +202,8 @@
 
     & .article-item {
       cursor: pointer;
-      padding: 24px;
+      padding: 12px;
+      min-height: 125px;
       display: flex;
       border-bottom: 1px solid #f4f4f4;
 
@@ -241,6 +243,7 @@
     }
 
     & .article-info {
+      
       & p {
         display: inline-block;
         margin-right: 24px;
@@ -250,8 +253,8 @@
       }
 
       & p.article-category {
-        height: 32px;
-        line-height: 32px;
+        height: 25px;
+        line-height: 25px;
         padding: 0 20px;
         font-size: 16px;
         color: #409EFF;

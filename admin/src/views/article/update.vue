@@ -38,6 +38,7 @@
         <mavon-editor
           v-model="formValidate.content"
           :ishljs="true"
+          @imgAdd="imgAdd"
           ref=md>
         </mavon-editor>
 
@@ -52,7 +53,7 @@
 <script>
   import {mapActions} from 'vuex';
   import getUploadToken from '../../libs/upload-token'
-
+  import article from '../../api/article'
   export default {
     data() {
       return {
@@ -94,6 +95,16 @@
         updateArticle: 'article/updateArticle',
         getCategoryList: 'category/getCategoryList'
       }),
+      // md 中图片上传
+      async imgAdd(filename,File){
+          // 第一步.将图片上传到服务器.
+          var formdata = new FormData();
+          formdata.append('file',File);
+          formdata.append('token',this.token);
+          let res= await article.uploadImageToQiniu(formdata);
+          console.log(res)
+          this.$refs.md.$img2Url(filename,`http://q02y21j2t.bkt.clouddn.com/${res.data.key}`)
+      },
       // 上传图片成功
       uploadSuccess(response) {
         const url = `http://cdn.boblog.com/${response.key}`;

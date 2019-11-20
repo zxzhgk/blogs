@@ -98,7 +98,8 @@
   .container {
     box-sizing: border-box;
     position: relative;
-    width: 70%;
+    width: 90%;
+    max-width: 1360px;
     margin: 24px auto;
 
     & .content {
@@ -125,8 +126,8 @@
         }
 
         & p.article-category {
-          height: 32px;
-          line-height: 32px;
+          height: 25px;
+          line-height: 25px;
           padding: 0 20px;
           font-size: 16px;
           color: #409EFF;

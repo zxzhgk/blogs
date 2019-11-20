@@ -3,7 +3,6 @@ import fetch from './fetch';
 export default {
   // 获取文章列表
   list(params) {
-    console.log(params)
     return fetch.get('/article', params)
   },
 

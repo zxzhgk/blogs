@@ -17,10 +17,6 @@
   ],
   "author": "https://github.com/liangfengbo",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/liangfengbo/nodejs-koa2-blog/issues"
-  },
-  "homepage": "https://github.com/liangfengbo/nodejs-koa2-blog#readme",
   "dependencies": {
     "@koa/cors": "^3.0.0",
     "axios": "^0.18.0",
@@ -29,6 +25,7 @@
     "jsonwebtoken": "^8.4.0",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
+    "koa-compress": "^3.0.0",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "lodash": "^4.17.11",

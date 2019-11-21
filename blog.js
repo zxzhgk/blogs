@@ -1,4 +1,5 @@
 const Koa = require('koa')
+var compress = require('koa-compress')
 const InitManager = require('./core/init')
 const parser = require('koa-bodyparser')
 const cors = require('@koa/cors');
@@ -7,7 +8,14 @@ const static = require('koa-static');
 const catchError = require('./middlewares/exception')
 
 const app = new Koa()
-
+app.use(compress({
+    filter: function (content_type) {
+        console.log(content_type)
+        return /text|javascript/i.test(content_type)
+    },
+    threshold: 1024,
+    flush: require('zlib').Z_SYNC_FLUSH
+  }))
 app.use(cors())
 app.use(catchError)
 app.use(parser())

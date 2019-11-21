@@ -15,7 +15,7 @@ const router = new Router({
 
 // 创建评论
 router.post('/comments', async (ctx) => {
-
+    ctx.compress = true
     // 通过验证器校验参数是否通过
     const v = await new CommentsValidator().validate(ctx);
 
@@ -52,7 +52,7 @@ router.delete('/comments/:id', new Auth(AUTH_ADMIN).m, async (ctx) => {
 
 // 修改评论
 router.put('/comments/:id', new Auth(AUTH_ADMIN).m, async (ctx) => {
-
+    ctx.compress = true
     // 通过验证器校验参数是否通过
     const v = await new PositiveArticleIdParamsValidator().validate(ctx);
 
@@ -78,6 +78,7 @@ router.get('/comments', async (ctx) => {
 
 // 获取评论详情
 router.get('/comments/:id', async (ctx) => {
+    ctx.compress = true
     // 通过验证器校验参数是否通过
     const v = await new PositiveArticleIdParamsValidator().validate(ctx);
 

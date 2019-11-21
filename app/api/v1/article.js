@@ -24,7 +24,8 @@ const router = new Router({
  * 创建文章
  */
 router.post('/article', new Auth(AUTH_ADMIN).m, async (ctx) => {
-
+    // console.log(ctx)
+    ctx.compress = true
     // 通过验证器校验参数是否通过
     const v = await new ArticleValidator().validate(ctx);
 
@@ -57,7 +58,7 @@ router.delete('/article/:id', new Auth(AUTH_ADMIN).m, async (ctx) => {
  * 更新文章
  */
 router.put('/article/:id', new Auth(AUTH_ADMIN).m, async (ctx) => {
-
+    ctx.compress = true
     // 通过验证器校验参数是否通过
     const v = await new PositiveIdParamsValidator().validate(ctx);
 
@@ -89,7 +90,7 @@ router.get('/article', async (ctx) => {
  * 查询文章详情
  */
 router.get('/article/:id', async (ctx) => {
-
+    ctx.compress = true
     // 通过验证器校验参数是否通过
     const v = await new PositiveIdParamsValidator().validate(ctx);
 

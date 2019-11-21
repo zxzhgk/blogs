@@ -10,8 +10,8 @@ const catchError = require('./middlewares/exception')
 const app = new Koa()
 app.use(compress({
     filter: function (content_type) {
-        console.log(content_type)
-        return /text|javascript/i.test(content_type)
+        // console.log(content_type)
+        return /text|javascript|json/i.test(content_type)
     },
     threshold: 1024,
     flush: require('zlib').Z_SYNC_FLUSH

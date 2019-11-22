@@ -41,6 +41,7 @@ export default {
     left: 10px;
     color: #a7a7a7;
     transition: all .8s;
+    z-index: 100;
     cursor: pointer;
     &:hover{
       color: #000;

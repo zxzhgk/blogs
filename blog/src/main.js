@@ -20,6 +20,14 @@ Vue.use(VueLazyLoad, {
   error: '../static/boblog.png',
   loading: '../static/boblog.png'
 })
+router.afterEach(async(to, from) => {
+  console.log(store)
+  if(to.name=="chat"){
+    
+    store.dispatch('layout/toggleSide')
+  }
+  // next();
+})
 new Vue({
   router,
   store,

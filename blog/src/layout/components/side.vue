@@ -5,7 +5,8 @@
     <el-input v-model="search" class="search" placeholder="搜点啥吧,万一有惊喜呢..."></el-input>
     <ul class="css1d2cc83689209bc nav">
       <router-link tag="li" to="/">首页</router-link>
-      <li>介绍</li>
+      <router-link tag="li" to="/about/chat">介绍</router-link>
+      <!-- <li>介绍</li> -->
     </ul>
   </section>
 </template>

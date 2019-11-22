@@ -39,6 +39,18 @@ export default new Router({
       ]
     },
     {
+      path: '/about',
+      component: Layout,
+      redirect: 'chat',
+      children: [
+        {
+          path: 'chat',
+          name: 'chat',
+          component: () => import('@/views/about/Home.vue')
+        }
+      ]
+    },
+    {
       // 关于我
       path: '/about',
       component: () => import('@/views/about/index.vue')

@@ -4,7 +4,7 @@ const InitManager = require('./core/init')
 const parser = require('koa-bodyparser')
 const cors = require('@koa/cors');
 const static = require('koa-static');
-
+require('./app/lib/soket.js')
 const catchError = require('./middlewares/exception')
 
 const app = new Koa()

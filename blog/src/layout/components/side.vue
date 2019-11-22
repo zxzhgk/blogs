@@ -32,12 +32,14 @@ export default {
 .layout-side{
   min-height:100vh;
   width:300px;
+  // display: none;
+  transform:translateX(0px);
   margin-left: -300px;
   position: relative;
   overflow: hidden;
   background:#fff;
   flex: none;
-  transition: margin-left .5s ease-out;
+  transition: transform .5s ease-out;
   border-right: 1px solid #efefef;
   & /deep/ .el-input__inner{
     border:none;
@@ -81,6 +83,6 @@ export default {
   }
 }
 .side-open{
-	margin-left: 0px;
+  transform:translateX(300px);
 }
 </style>

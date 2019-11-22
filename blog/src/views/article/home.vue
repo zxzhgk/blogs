@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <article class="article" id="article">
-      <nav class="article-nav">
+      <!-- <nav class="article-nav">
         <ul class="article-nav-box">
           <li v-for="(item, index) in nav"
               @click="changeArticleDesc(item.desc, index)"
@@ -10,7 +10,7 @@
             <i :class="item.icon"></i> {{item.name}}
           </li>
         </ul>
-      </nav>
+      </nav> -->
       <ul class="article-box" v-if="list.length > 0">
         <li class="article-item" v-for="(item, index) in list"
             :key="index"

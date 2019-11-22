@@ -21,7 +21,7 @@ Vue.use(VueLazyLoad, {
   loading: '../static/boblog.png'
 })
 router.afterEach(async(to, from) => {
-  console.log(store)
+  // console.log(store)
   if(to.name=="chat"){
     
     store.dispatch('layout/toggleSide')

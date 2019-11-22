@@ -216,7 +216,6 @@ export default {
   // background: rgb(243, 241, 241);
   overflow: hidden;
   // opacity: 0.6;
-  z-index: 99;
   .chat{
     width: 90vw;
     height: 80vh;
@@ -241,11 +240,12 @@ export default {
           .name{
             flex: none;
             border-radius: 10px;
-            padding: 5px 10px;
+            padding: 0px 10px;
             background: #737573;
             color: #fff;
             font-size: 14px;
             height: 30px;
+            line-height: 30px;
             position: relative;
           }
           // .name:after{

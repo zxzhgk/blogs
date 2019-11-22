@@ -206,9 +206,10 @@
       min-height: 125px;
       display: flex;
       border-bottom: 1px solid #f4f4f4;
+      transition: background .5s;
 
       &:hover {
-        background: #f4f4f4;
+        background: #f8f8f8;
       }
 
       &:hover .article-title {

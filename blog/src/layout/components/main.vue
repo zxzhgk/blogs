@@ -32,10 +32,8 @@ export default {
   overflow-y:scroll;
   background:#fff;
   width: 100vw;
-  // padding-right: 300px;
-  // transform:translateX(-310px);
   height: 100vh;
-  transition: all .8s;
+  transition: transform .8s;
   .side-menu{
     width: 30px;
     height: 30px;
@@ -44,16 +42,12 @@ export default {
     left: 0px;
     color: #a7a7a7;
     transform:translateX(10px);
-    transition: all .8s;
+    transition: transform .8s;
     z-index: 100;
     cursor: pointer;
     &:hover{
       color: #000;
     }
-  }
-  .sild-open{
-    // transform:translateX(310px);
-    // left:310px;
   }
   .fade-enter-active, .fade-leave-active {
     transition: opacity .5s;
@@ -61,11 +55,17 @@ export default {
   .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;
   }
+  // 选择字组件的第二个元素
+  & /deep/>:nth-child(2){
+    transition: transform .8s;
+    transform:translateX(0px);
+  }
 }
 .main-open{
-  // width:300px;
   transform:translateX(300px);
-  padding-right: 300px;
-  // left:310px;
+  // 选择字组件的第二个元素
+  & /deep/>:nth-child(2){
+    transform:translateX(-150px);
+  }
 }
 </style>

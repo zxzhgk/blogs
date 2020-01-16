@@ -151,10 +151,6 @@ export default {
       this.msgList.push(msgObject)
       if(!this.user.includes(msgObject.name)){
         this.user.push(msgObject.name)
-        // this.$message({
-        //   message: `欢迎${msgObject.name}`,
-        //   type: 'success'
-        // });
       }
       this.$nextTick(()=>{
         this.$refs.messageList.scrollTop = this.$refs.messageList.scrollHeight

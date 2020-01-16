@@ -59,8 +59,9 @@ export default {
   .nav{
     // margin-top: 30px;
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 40px;
+	font-weight: 700;
     color: #555555;
     cursor: pointer;
     // & li{
@@ -71,7 +72,7 @@ export default {
     }
   }
   .verse{
-    font-size: 25px;
+    font-size: 22px;
     writing-mode: vertical-lr;
     height: 235px;
     margin-left: 100px;

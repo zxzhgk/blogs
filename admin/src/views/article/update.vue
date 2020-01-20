@@ -103,7 +103,7 @@
           formdata.append('token',this.token);
           let res= await article.uploadImageToQiniu(formdata);
           console.log(res)
-          this.$refs.md.$img2Url(filename,`http://q02y21j2t.bkt.clouddn.com/${res.data.key}`)
+          this.$refs.md.$img2Url(filename,`http://qiniu.20151212.club/${res.data.key}`)
       },
       // 上传图片成功
       uploadSuccess(response) {

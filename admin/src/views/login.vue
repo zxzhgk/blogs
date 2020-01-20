@@ -41,8 +41,8 @@
         buttonLoading: false,
         // 表单内容，email && 密码
         form: {
-          email: '',
-          password: ''
+          email: '786039294@qq.com',
+          password: 'zhangxu_123456'
         },
 
         // 表单验证，email && 密码

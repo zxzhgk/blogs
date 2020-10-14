@@ -91,6 +91,7 @@ class LinValidator {
     }
 
     async _check(key, alias = {}) {
+        
         const isCustomFunc = typeof (this[key]) == 'function' ? true : false
         let result;
         if (isCustomFunc) {
